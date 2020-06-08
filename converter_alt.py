@@ -13,6 +13,7 @@ from scipy import stats
 from sklearn.preprocessing import StandardScaler
 
 data = pd.read_excel('/run/media/sphericalkat/archive/datasets/features.xlsx')
+data.to_csv('/run/media/sphericalkat/archive/datasets/power-quality-meter.csv', sep=',')
 print(list(data.columns.values))
 
 input_data = data.drop(['Date','Time','Cos Phi AN Avg','Cos Phi BN Avg','Cos Phi CN Avg','Cos Phi Total Avg'], axis = 1)
